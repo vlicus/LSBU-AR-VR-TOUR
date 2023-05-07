@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html class="a-fullscreen" foxified>
+  <title>LSBU TOUR</title>
+  <head>
+    <link rel="icon" href="data:," />
+    <script src="./aframe.js"></script>
+  </head>
+
+  <body>
+    <a-scene>
+      <!--asset management system that allows 
+      us to place our assets in one place and to preload
+      and cache assets for better performance-->
+      <a-asset>
+        <!-- The video primitive plays a video as a 
+        texture on a flat plane.-->
+
+        <!-- A class has been assigned to all videos in 
+        order to be managed later on by a function-->
+
+        <!-- Also an ID has been assigned to them to 
+        make reference in different functions-->
+
+        <!-- Note that class are the same but ID are not
+        because we need an unique ID to every video while
+        we just need a single class to the different videos
+        -->
+        <!-- Set the "playsinline" attribute to true so that the 
+        video plays inline, rather than going full screen-->
+
+        <!-- set the "playsinline" attribute to true so that 
+        the video plays inline, rather than going full screen-->
+
+        <!-- set the "loop" attribute to true so that the video loops back 
+        to the beginning and replays after it finishes playing-->
+
+        <!-- set the "crossOrigin" attribute to "anonymous" so that the video 
+        source is loaded with CORS (Cross-Origin Resource Sharing) enabled-->
+        <video
+          class="video"
+          id="video1"
+          src="assets/Borough_Road_1.mp4"
+          autoplay
+          playsinline
+          loop
+          crossorigin="anonymous"
+        ></video>
+        <!-- if add muted next to autoplay it will allow the video
+           to play from the beginning but it wont have sound-->
+        <video
+          class="video"
+          id="video2"
+          src="assets/Key_Worth_Center_1.mp4"
+          autoplay
+          playsinline
+          loop
+          crossorigin="anonymous"
+        ></video>
+        <video
+          class="video"
+          id="video3"
+          src="assets/Faraday_Wing_1.mp4"
+          autoplay
+          playsinline
+          loop
+          crossorigin="anonymous"
+        ></video>
+        <video
+          class="video"
+          id="video4"
+          src="assets/Robot_Student_Life_Centre_2.mp4"
+          autoplay
+          playsinline
+          loop
+          crossorigin="anonymous"
+        ></video>
+        <video
+          class="video"
+          id="video5"
+          src="assets/Perry_Library_1.mp4"
+          autoplay
+          playsinline
+          loop
+          crossorigin="anonymous"
+        ></video>
+      </a-asset>
+
+      <!-- Scene 1 -->
+      <!-- Creating an entity (scene) -->
+      <!-- Shared class is given called "scene" tu make reference
+      of it later on -->
+
+      <!-- Unique ID is given to every different scene -->
+      <!-- More attributes such as position, visible
+      (Setting this true will make sure the first video will be "visible")
+      and scale-->
+      <a-entity
+        class="scene"
+        id="scene1"
+        position="0 -1 0"
+        visible="true"
+        scale="1 1 1"
+      >
+        <!-- toscene 2 box -->
+        <!-- Creating a box and assigning different attributes
+        such as: color, position, scale and functionality(toscene2)-->
+        <a-box
+          color="green"
+          position="-5 0 -2"
+          scale="0.5 0.5 0.5"
+          onclick="toscene2()"
+        >
+          <!-- Assigning text to the different boxes -->
+          <a-text
+            value="Key Worth Center"
+            color="#000000"
+            rotation="0 90 0"
+            position="0 1 1"
+            scale="1 1 1"
+          ></a-text>
+        </a-box>
+
+        <!-- Displaying the 360-degree video -->
+        <!-- Video Display -->
+        <a-videosphere src="#video1"></a-videosphere>
+      </a-entity>
+
+      <!-- Scene 2 -->
+      <a-entity
+        class="scene"
+        id="scene2"
+        position="0 -1 0"
+        visible="false"
+        scale="1 1 1"
+      >
+        <!-- toscene 3 box -->
+        <a-box
+          color="green"
+          position="-5 1 -2"
+          scale="0.5 0.5 0.5"
+          onclick="toscene3()"
+        >
+          <a-text
+            value="Faraday Wing"
+            color="#000000"
+            rotation="0 90 0"
+            position="0 1 1"
+            scale="1 1 1"
+          ></a-text>
+        </a-box>
+
+        <!-- Video Display -->
+        <a-videosphere src="#video2"></a-videosphere>
+      </a-entity>
+
+      <!-- Scene 3 -->
+      <a-entity
+        class="scene"
+        id="scene3"
+        position="0 -1 0"
+        visible="true"
+        scale="1 1 1"
+      >
+        <!-- toscene 4 box -->
+        <a-box
+          color="green"
+          position="-5 2 -2"
+          scale="0.5 0.5 0.5"
+          onclick="toscene4()"
+        >
+          <a-text
+            value="Student Life Centre by a robot scene"
+            color="#000000"
+            rotation="0 90 0"
+            position="0 1 1"
+            scale="1 1 1"
+          ></a-text>
+        </a-box>
+
+        <!-- Video Display -->
+        <a-videosphere src="#video3"></a-videosphere>
+      </a-entity>
+
+      <!-- Scene 4 -->
+      <a-entity
+        class="scene"
+        id="scene4"
+        position="0 -1 0"
+        visible="true"
+        scale="1 1 1"
+      >
+        <!-- toscene 5 box -->
+        <a-box
+          color="green"
+          position="-5 3 -2"
+          scale="0.5 0.5 0.5"
+          onclick="toscene5()"
+        >
+          <a-text
+            value="Perry Library"
+            color="#000000"
+            rotation="0 90 0"
+            position="0 1 1"
+            scale="1 1 1"
+          ></a-text>
+        </a-box>
+
+        <!-- Video Display -->
+        <a-videosphere src="#video4"></a-videosphere>
+      </a-entity>
+
+      <!-- Scene 5 -->
+      <a-entity
+        class="scene"
+        id="scene5"
+        position="0 -1 0"
+        visible="true"
+        scale="1 1 1"
+      >
+        <!-- toscene 1 box -->
+        <a-box
+          color="green"
+          position="-5 4 -2"
+          scale="0.5 0.5 0.5"
+          onclick="toscene1()"
+        >
+          <a-text
+            value="Borough Road"
+            color="#000000"
+            rotation="0 90 0"
+            position="0 1 1"
+            scale="1 1 1"
+          ></a-text>
+        </a-box>
+
+        <!-- Video Display -->
+        <a-videosphere src="#video5"></a-videosphere>
+      </a-entity>
+
+      <!-- Player Viewport -->
+      <a-camera position="0 2 0">
+        <!-- Cursor circle -->
+        <a-cursor color="yellow"> </a-cursor>
+      </a-camera>
+    </a-scene>
+
+    
+    <!-- Script to switch scenes -->
+    <!-- Script to start/pause the videos -->
+    <!-- document.querySelectorAll selects all the elements 
+    with the video "class" and loops them usign a lambda function
+    taking the argument "video", then calling the pause function to
+    pause the video and then setting the timer of the video at 0 seconds-->
+    <!-- document.querySelectorAll does the exact same thing than the another SelectorAll
+    but now its function is to set the attribute visible of every scene by false -->
+    <script type="text/javascript">
+      // stop video
+      function pauseVideo() {
+        document.querySelectorAll(".video").forEach((video) => {
+          video.pause();
+          video.currentTime = 0;
+        });
+      }
+
+      // Function to hide the scenes in the background
+      // document.querySelectorAll does the exact same thing than the another SelectorAll
+      // in the previous function but now its function is to set the attribute 
+      // visible of every scene by false
+      function hideScenes() {
+        document.querySelectorAll(".scene").forEach((scene) => {
+          scene.setAttribute("visible", "false");
+        });
+      }
+
+      // This function will bring us back to scene1
+      // It does it by calling pauseVideo() and hideScenes() functions.
+      // then document.querySelector("#sceneX") will switch the attribute of visible from
+      // false (give it by default when creating the scene) to true
+      // document.querySelector("#videoX").play will play the desired video
+      // being X in both cases the next scene/video that we would like to play.
+      function toscene1() {
+        pauseVideo();
+        hideScenes();
+
+        document.querySelector("#scene1").setAttribute("visible", "true");
+        document.querySelector("#video1").play();
+      }
+
+      function toscene2() {
+        pauseVideo();
+        hideScenes();
+        document.querySelector("#scene2").setAttribute("visible", "true");
+        document.querySelector("#video2").play();
+      }
+
+      function toscene3() {
+        pauseVideo();
+        hideScenes();
+        document.querySelector("#scene3").setAttribute("visible", "true");
+        document.querySelector("#video3").play();
+      }
+
+      function toscene4() {
+        pauseVideo();
+        hideScenes();
+        document.querySelector("#scene4").setAttribute("visible", "true");
+        document.querySelector("#video4").play();
+      }
+
+      function toscene5() {
+        pauseVideo();
+        hideScenes();
+        document.querySelector("#scene5").setAttribute("visible", "true");
+        document.querySelector("#video5").play();
+      }
+    </script>
+  </body>
+</html>
