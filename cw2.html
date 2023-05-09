@@ -39,7 +39,7 @@
         <video
           class="video"
           id="video1"
-          src="assets/Key_Worth_Center_1.mp4"
+          src="assets/Borough_Road_1.mp4"
           autoplay
           playsinline
           loop
@@ -101,14 +101,14 @@
         visible="true"
         scale="1 1 1"
       >
-        <!-- toscene 2 box -->
+        <!-- toScene 2 box -->
         <!-- Creating a box and assigning different attributes
-        such as: color, position, scale and functionality(toscene2)-->
+        such as: color, position, scale and functionality(toScene2)-->
         <a-box
           color="green"
           position="-5 0 -2"
           scale="0.5 0.5 0.5"
-          onclick="toscene2()"
+          onclick="toScene2()"
         >
           <!-- Assigning text to the different boxes -->
           <a-text
@@ -133,12 +133,12 @@
         visible="false"
         scale="1 1 1"
       >
-        <!-- toscene 3 box -->
+        <!-- toScene 3 box -->
         <a-box
           color="green"
           position="-5 1 -2"
           scale="0.5 0.5 0.5"
-          onclick="toscene3()"
+          onclick="toScene3()"
         >
           <a-text
             value="Faraday Wing"
@@ -161,12 +161,12 @@
         visible="true"
         scale="1 1 1"
       >
-        <!-- toscene 4 box -->
+        <!-- toScene 4 box -->
         <a-box
           color="green"
           position="-5 2 -2"
           scale="0.5 0.5 0.5"
-          onclick="toscene4()"
+          onclick="toScene4()"
         >
           <a-text
             value="Student Life Centre by a robot scene"
@@ -189,12 +189,12 @@
         visible="true"
         scale="1 1 1"
       >
-        <!-- toscene 5 box -->
+        <!-- toScene 5 box -->
         <a-box
           color="green"
           position="-5 3 -2"
           scale="0.5 0.5 0.5"
-          onclick="toscene5()"
+          onclick="toScene5()"
         >
           <a-text
             value="Perry Library"
@@ -217,12 +217,12 @@
         visible="true"
         scale="1 1 1"
       >
-        <!-- toscene 1 box -->
+        <!-- toScene 1 box -->
         <a-box
           color="green"
           position="-5 4 -2"
           scale="0.5 0.5 0.5"
-          onclick="toscene1()"
+          onclick="toScene1()"
         >
           <a-text
             value="Borough Road"
@@ -244,7 +244,6 @@
       </a-camera>
     </a-scene>
 
-    
     <!-- Script to switch scenes -->
     <!-- Script to start/pause the videos -->
     <!-- document.querySelectorAll selects all the elements 
@@ -264,7 +263,7 @@
 
       // Function to hide the scenes in the background
       // document.querySelectorAll does the exact same thing than the another SelectorAll
-      // in the previous function but now its function is to set the attribute 
+      // in the previous function but now its function is to set the attribute
       // visible of every scene by false
       function hideScenes() {
         document.querySelectorAll(".scene").forEach((scene) => {
@@ -278,7 +277,7 @@
       // false (give it by default when creating the scene) to true
       // document.querySelector("#videoX").play will play the desired video
       // being X in both cases the next scene/video that we would like to play.
-      function toscene1() {
+      function toScene1() {
         pauseVideo();
         hideScenes();
 
@@ -286,28 +285,28 @@
         document.querySelector("#video1").play();
       }
 
-      function toscene2() {
+      function toScene2() {
         pauseVideo();
         hideScenes();
         document.querySelector("#scene2").setAttribute("visible", "true");
         document.querySelector("#video2").play();
       }
 
-      function toscene3() {
+      function toScene3() {
         pauseVideo();
         hideScenes();
         document.querySelector("#scene3").setAttribute("visible", "true");
         document.querySelector("#video3").play();
       }
 
-      function toscene4() {
+      function toScene4() {
         pauseVideo();
         hideScenes();
         document.querySelector("#scene4").setAttribute("visible", "true");
         document.querySelector("#video4").play();
       }
 
-      function toscene5() {
+      function toScene5() {
         pauseVideo();
         hideScenes();
         document.querySelector("#scene5").setAttribute("visible", "true");
