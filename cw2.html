@@ -4,37 +4,38 @@
   <head>
     <link rel="icon" href="data:," />
     <script src="./aframe.js"></script>
+    <script src=""./app.js"></script>
   </head>
 
   <body>
     <a-scene>
-      <!--asset management system that allows 
+      <!--asset management system that allows
       us to place our assets in one place and to preload
       and cache assets for better performance-->
       <a-asset>
-        <!-- The video primitive plays a video as a 
+        <!-- The video primitive plays a video as a
         texture on a flat plane.-->
 
-        <!-- A class has been assigned to all videos in 
+        <!-- A class has been assigned to all videos in
         order to be managed later on by a function-->
 
-        <!-- Also an ID has been assigned to them to 
+        <!-- Also an ID has been assigned to them to
         make reference in different functions-->
 
         <!-- Note that class are the same but ID are not
         because we need an unique ID to every video while
         we just need a single class to the different videos
         -->
-        <!-- Set the "playsinline" attribute to true so that the 
+        <!-- Set the "playsinline" attribute to true so that the
         video plays inline, rather than going full screen-->
 
-        <!-- set the "playsinline" attribute to true so that 
+        <!-- set the "playsinline" attribute to true so that
         the video plays inline, rather than going full screen-->
 
-        <!-- set the "loop" attribute to true so that the video loops back 
+        <!-- set the "loop" attribute to true so that the video loops back
         to the beginning and replays after it finishes playing-->
 
-        <!-- set the "crossOrigin" attribute to "anonymous" so that the video 
+        <!-- set the "crossOrigin" attribute to "anonymous" so that the video
         source is loaded with CORS (Cross-Origin Resource Sharing) enabled-->
         <video
           class="video"
@@ -246,7 +247,7 @@
 
     <!-- Script to switch scenes -->
     <!-- Script to start/pause the videos -->
-    <!-- document.querySelectorAll selects all the elements 
+    <!-- document.querySelectorAll selects all the elements
     with the video "class" and loops them usign a lambda function
     taking the argument "video", then calling the pause function to
     pause the video and then setting the timer of the video at 0 seconds-->
